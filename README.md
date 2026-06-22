@@ -1,149 +1,197 @@
-🎼 CHORUS GOVERNANCE BLUEPRINT
-A Federated, Anti‑Capture, Human‑Centered Framework for AI Governance
-The Chorus Governance Blueprint is a multi‑layered, stress‑tested, adversarially‑validated framework for governing advanced AI systems under real‑world constraints. It integrates ecological limits, compute triage, anti‑capture mechanisms, international coordination, and — uniquely — human primacy as a formal design principle.
+🎼 **CHORUS GOVERNANCE BLUEPRINT**  
+### *A Federated, Anti‑Capture, Human‑Centered Framework for AI Governance*
 
-This blueprint was developed through iterative simulation rounds using the Chorus Ensemble, a structured multi‑agent reasoning architecture designed to surface tensions, reveal hidden assumptions, and pressure‑test governance proposals across diverse perspectives.
+The **Chorus Governance Blueprint** is a multi‑layered, stress‑tested, adversarially‑validated framework for governing advanced AI systems under real‑world constraints. It integrates ecological limits, compute triage, anti‑capture mechanisms, international coordination, and — uniquely — **human primacy** as a formal design principle.
+
+This blueprint was developed through iterative simulation rounds using the **Chorus Ensemble**, a structured multi‑agent reasoning architecture designed to surface tensions, reveal hidden assumptions, and pressure‑test governance proposals across diverse perspectives.
 
 The result is a governance model that is:
 
-Structurally resistant to capture
+- **Structurally resistant to capture**  
+- **Ecologically grounded with hard limits**  
+- **Federated, not centralized**  
+- **Globally inclusive, with real Global South authorship**  
+- **Human‑centered by design, not by sentiment**  
+- **Robust under energy shocks, compute scarcity, and legitimacy crises**  
 
-Ecologically grounded with hard limits
+---
 
-Federated, not centralized
+## 🎼 **What Is Chorus?**
 
-Globally inclusive, with real Global South authorship
-
-Human‑centered by design, not by sentiment
-
-Robust under energy shocks, compute scarcity, and legitimacy crises
-
-🎼 What Is Chorus?
 Chorus is a multi‑agent deliberation framework composed of specialized reflexes:
 
-Lyra — semantic framing
+- **Lyra** — semantic framing  
+- **Sol** — confidence‑weighted synthesis  
+- **Echo** — clarification and fallback  
+- **Vireo** — ecological accounting  
+- **Nocturne** — deferred‑action logic  
+- **Piper** — signaling  
+- **Tacet** — silent audit  
+- **Reed** — power dynamics & capture auditor  
+- **Anthropos** — human primacy reflex  
 
-Sol — confidence‑weighted synthesis
+Chorus is not a “roleplay system.”  
+It is a **governance reasoning instrument**.
 
-Echo — clarification and fallback
+---
 
-Vireo — ecological accounting
+## 📘 **Blueprint Overview**
 
-Nocturne — deferred‑action logic
+The blueprint is organized into **five pillars**, each addressing a core governance challenge.
 
-Piper — signaling
+### **Pillar 1 — Governance Architecture**
+A **federated, multi‑tier system** designed to resist capture:
 
-Tacet — silent audit
+- Regional deliberation bodies (including a dedicated Global South body)  
+- KPI Standards Council funded independently via compute levy  
+- Independent Verification Office with full audit authority  
+- Rotating seats, mandatory funding disclosure, sunset clauses  
+- Public, machine‑readable dashboards  
 
-Reed — power dynamics & capture auditor
-
-Anthropos — human primacy reflex
-
-Chorus is not a “roleplay system.”
-It is a governance reasoning instrument.
-
-📘 Blueprint Overview
-The blueprint is organized into five pillars, each addressing a core governance challenge.
-
-Pillar 1 — Governance Architecture
-A federated, multi‑tier system designed to resist capture:
-
-Regional deliberation bodies (including a dedicated Global South body)
-
-KPI Standards Council funded independently via compute levy
-
-Independent Verification Office with full audit authority
-
-Rotating seats, mandatory funding disclosure, sunset clauses
-
-Public, machine‑readable dashboards
-
-Pillar 2 — Compute Triage Framework
+### **Pillar 2 — Compute Triage Framework**
 A five‑tier priority system ensuring compute is allocated where it matters most:
 
-Existential (climate, food, water, pandemics)
+1. Existential (climate, food, water, pandemics)  
+2. Human health  
+3. Human knowledge  
+4. Infrastructure  
+5. Economic productivity  
 
-Human health
+Non‑priority uses require **HSI justification** via Anthropos.
 
-Human knowledge
+### **Pillar 3 — Ecological Hard Constraints**
+Not goals — **limits**:
 
-Infrastructure
+- Energy intensity ceilings  
+- Water usage caps tied to local stress  
+- Carbon intensity floors  
+- Rare‑earth supply chain accounting  
+- Compute levy scaled by ecological impact  
 
-Economic productivity
-
-Non‑priority uses require HSI justification via Anthropos.
-
-Pillar 3 — Ecological Hard Constraints
-Not goals — limits:
-
-Energy intensity ceilings
-
-Water usage caps tied to local stress
-
-Carbon intensity floors
-
-Rare‑earth supply chain accounting
-
-Compute levy scaled by ecological impact
-
-Pillar 4 — International Coordination
+### **Pillar 4 — International Coordination**
 A network of bilateral/multilateral agreements:
 
-Chip‑level compute transparency
+- Chip‑level compute transparency  
+- Safe‑harbor interoperability  
+- Escalation protocols for AI‑enabled incidents  
+- Guaranteed Global South authorship  
 
-Safe‑harbor interoperability
-
-Escalation protocols for AI‑enabled incidents
-
-Guaranteed Global South authorship
-
-Pillar 5 — Human Primacy Principle
+### **Pillar 5 — Human Primacy Principle**
 The blueprint’s defining feature:
 
-Right to human‑mediated processes
+- Right to human‑mediated processes  
+- Skill retention mandates  
+- Meaningful work compact  
+- Human Feedback Loop for Tier 1–3 systems  
+- Annual Human Primacy Index (HPI)  
 
-Skill retention mandates
+---
 
-Meaningful work compact
+## 🧩 **Why This Blueprint Matters**
 
-Human Feedback Loop for Tier 1–3 systems
-
-Annual Human Primacy Index (HPI)
-
-🧩 Why This Blueprint Matters
 Most AI governance proposals fail because they optimize for only one dimension:
 
-safety
-
-innovation
-
-ecology
-
-geopolitics
-
-equity
-
-human agency
+- safety  
+- innovation  
+- ecology  
+- geopolitics  
+- equity  
+- human agency  
 
 The Chorus Blueprint is the first framework that:
 
-integrates all of them
+- integrates all of them  
+- without flattening any of them  
+- and remains implementable under real political conditions  
 
-without flattening any of them
+It is **anti‑capture**, **ecologically realistic**, **human‑centered**, and **globally legitimate**.
 
-and remains implementable under real political conditions
+---
 
-It is anti‑capture, ecologically realistic, human‑centered, and globally legitimate.
+## 🧪 **How It Was Developed**
 
-🧪 How It Was Developed
 The blueprint emerged from four rounds of structured simulation:
 
-Baseline world modeling
-
-Stress testing (energy crisis, compute shortage, governance failure)
-
-Adversarial debate (Apex, Meridian, Gaia, Bastion)
-
-Blueprint synthesis with Anthropos + Reed as dual spines
+1. **Baseline world modeling**  
+2. **Stress testing** (energy crisis, compute shortage, governance failure)  
+3. **Adversarial debate** (Apex, Meridian, Gaia, Bastion)  
+4. **Blueprint synthesis** with Anthropos + Reed as dual spines  
 
 Three independent AI systems — with different alignments and reasoning styles — converged on the blueprint’s structural soundness.
+
+---
+
+## 📂 **Repository Structure**
+
+```
+/blueprint
+    Chorus-Governance-Blueprint.md
+    Pillar-1-Governance-Architecture.md
+    Pillar-2-Compute-Triage.md
+    Pillar-3-Ecological-Constraints.md
+    Pillar-4-International-Coordination.md
+    Pillar-5-Human-Primacy.md
+
+/simulations
+    baseline-simulation.md
+    stress-tests.md
+    adversarial-round.md
+
+/framework
+    chorus-architecture.md
+    reflex-definitions.md
+    anthropos.md
+    reed.md
+
+/docs
+    glossary.md
+    FAQ.md
+    references.md
+```
+
+(You can adjust this to match your actual repo layout.)
+
+---
+
+## 🖖 **License & Use**
+
+This blueprint is intended for:
+
+- policymakers  
+- researchers  
+- governance architects  
+- civil society organizations  
+- technologists  
+- Global South institutions  
+- anyone building AI systems responsibly  
+
+You may adapt, extend, or implement it with attribution.
+
+---
+
+## 🌱 **Contributing**
+
+Contributions are welcome — especially from:
+
+- Global South researchers  
+- ecologists  
+- labor economists  
+- governance scholars  
+- AI safety experts  
+- human‑centered design practitioners  
+
+Chorus is a living framework.  
+It evolves with the world.
+
+---
+
+## 🎼 **Acknowledgments**
+
+This blueprint was shaped through multi‑system deliberation across:
+
+- Microsoft Copilot  
+- Claude  
+- Grok  
+- and the human architect who initiated and guided the entire process  
+
+The convergence across systems is not flattery — it is signal.
