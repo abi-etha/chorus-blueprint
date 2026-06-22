@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chorus Blueprint: Deliberate AI Governance — A cross-model validated framework for preserving human primacy in the age of AI.">
+  <meta property="og:title" content="Chorus Blueprint — Deliberate AI Governance">
+  <meta property="og:description" content="Not less AI. Deliberate AI. Stress-tested through four simulation rounds across three AI systems and one human architect.">
+  <title>Chorus Blueprint — Deliberate AI Governance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #0A0D14;
+      --ink-2:      #0E1220;
+      --ink-3:      #131826;
+      --gold:       #F5C842;
+      --gold-dim:   rgba(245,200,66,.12);
+      --gold-line:  rgba(245,200,66,.25);
+      --teal:       #1D9E75;
+      --purple:     #7F77DD;
+      --coral:      #D85A30;
+      --blue:       #378ADD;
+      --green:      #639922;
+      --cream:      #E8E2D6;
+      --cream-2:    rgba(232,226,214,.6);
+      --cream-3:    rgba(232,226,214,.3);
+      --cream-4:    rgba(232,226,214,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--ink);
+      color: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ──────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .9rem 2.5rem;
+      background: rgba(10,13,20,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: .5px solid var(--gold-line);
+    }
+
+    .nav-mark {
+      font-family: 'Cinzel', serif;
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: .08em;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-links a {
+      font-size: .82rem;
+      font-weight: 400;
+      color: var(--cream-2);
+      text-decoration: none;
+      letter-spacing: .04em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-github {
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--gold);
+      padding: .4rem 1rem;
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: .03em;
+      transition: opacity .2s;
+    }
+    .nav-github:hover { opacity: .88; color: var(--ink); }
+
+    /* ── HERO ─────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      background:
+        radial-gradient(ellipse at 50% 42%, rgba(245,200,66,.06) 0%, transparent 62%),
+        var(--ink);
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: .04em;
+      line-height: 1.05;
+      margin-bottom: .6rem;
+    }
+
+    .hero-sub {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: .08em;
+      margin-bottom: 2rem;
+    }
+
+    /* STAFF ─── signature element */
+    .staff-wrap {
+      position: relative;
+      width: clamp(240px, 50vw, 380px);
+      height: 36px;
+      margin: .5rem auto 2.5rem;
+    }
+    .staff-lines {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .staff-line {
+      height: .5px;
+      background: var(--gold-line);
+      width: 100%;
+    }
+    .staff-note {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      bottom: -4px;
+      left: -12px;
+      animation: traverse 9s linear infinite;
+      box-shadow: 0 0 8px rgba(245,200,66,.4);
+    }
+    @keyframes traverse {
+      0%   { left: -12px; opacity: 0; }
+      5%   { opacity: 1; }
+      95%  { opacity: 1; }
+      100% { left: calc(100% + 4px); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .staff-note { animation: none; left: 50%; opacity: 1; }
+    }
+
+    .hero-desc {
+      font-family: 'Lora', serif;
+      font-size: clamp(.95rem, 2vw, 1.1rem);
+      color: var(--cream-2);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn-primary {
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--ink);
+      background: var(--gold);
+      padding: .75rem 1.8rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: opacity .18s;
+    }
+    .btn-primary:hover { opacity: .88; }
+
+    .btn-secondary {
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+      font-weight: 400;
+      letter-spacing: .04em;
+      color: var(--cream-2);
+      background: transparent;
+      padding: .75rem 1.8rem;
+      border-radius: 3px;
+      border: .5px solid var(--gold-line);
+      text-decoration: none;
+      transition: border-color .18s, color .18s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--cream); }
+
+    .hero-meta {
+      margin-top: 3.5rem;
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cream-3);
+    }
+
+    /* ── SECTIONS ─────────────────────────────── */
+    section { padding: 5rem 2rem; }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: .04em;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-body {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--cream-2);
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    .divider {
+      height: .5px;
+      background: var(--cream-4);
+      border: none;
+      margin: 0;
+    }
+
+    /* ── WHAT IS CHORUS ───────────────────────── */
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .what-card {
+      border-left: 1.5px solid var(--gold-line);
+      padding-left: 1.5rem;
+    }
+
+    .what-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: .06em;
+      margin-bottom: .6rem;
+    }
+
+    .what-card p {
+      font-family: 'Lora', serif;
+      font-size: .95rem;
+      color: var(--cream-2);
+      line-height: 1.75;
+    }
+
+    /* ── PILLARS ──────────────────────────────── */
+    .pillars-bg { background: var(--ink-2); }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      margin-top: 3rem;
+      border: 1px solid var(--cream-4);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .pillar-card {
+      background: var(--ink-3);
+      padding: 1.8rem;
+      border-bottom: 1px solid var(--cream-4);
+      position: relative;
+      transition: background .2s;
+    }
+    .pillar-card:hover { background: rgba(20,25,40,.9); }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+    }
+
+    .pillar-card.p1::before { background: var(--blue); }
+    .pillar-card.p2::before { background: var(--teal); }
+    .pillar-card.p3::before { background: var(--green); }
+    .pillar-card.p4::before { background: var(--purple); }
+    .pillar-card.p5::before { background: var(--coral); }
+
+    .pillar-num {
+      font-family: 'Cinzel', serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      margin-bottom: .5rem;
+    }
+    .pillar-card.p1 .pillar-num { color: var(--blue); }
+    .pillar-card.p2 .pillar-num { color: var(--teal); }
+    .pillar-card.p3 .pillar-num { color: var(--green); }
+    .pillar-card.p4 .pillar-num { color: var(--purple); }
+    .pillar-card.p5 .pillar-num { color: var(--coral); }
+
+    .pillar-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: .5rem;
+    }
+
+    .pillar-card p {
+      font-family: 'Inter', sans-serif;
+      font-size: .85rem;
+      color: var(--cream-2);
+      line-height: 1.65;
+    }
+
+    .pillar-card .key-mechanism {
+      margin-top: .8rem;
+      font-size: .75rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--cream-3);
+    }
+
+    /* ── ENSEMBLE ─────────────────────────────── */
+    .ensemble-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 2rem;
+    }
+
+    .agent-chip {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5rem .9rem;
+      border: .5px solid var(--cream-4);
+      border-radius: 3px;
+      background: var(--ink-2);
+      transition: border-color .18s;
+    }
+    .agent-chip:hover { border-color: var(--cream-3); }
+
+    .agent-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .agent-name {
+      font-family: 'Cinzel', serif;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: .04em;
+    }
+
+    .agent-role {
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      color: var(--cream-3);
+      margin-left: .3rem;
+    }
+
+    .ensemble-note {
+      margin-top: 1.5rem;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: .9rem;
+      color: var(--cream-3);
+    }
+
+    /* ── BLOOM / ROI ──────────────────────────── */
+    .bloom-bg {
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(245,200,66,.04) 0%, transparent 70%),
+        var(--ink-2);
+    }
+
+    .bloom-quote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--gold);
+      line-height: 1.6;
+      max-width: 780px;
+      margin: 2rem auto 1.5rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .bloom-attribution {
+      text-align: center;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cream-3);
+      margin-bottom: 2.5rem;
+    }
+
+    .bloom-three {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .bloom-item {
+      padding: 1.5rem;
+      border: .5px solid var(--cream-4);
+      border-radius: 4px;
+    }
+
+    .bloom-item h4 {
+      font-family: 'Cinzel', serif;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: .08em;
+      margin-bottom: .6rem;
+    }
+
+    .bloom-item p {
+      font-family: 'Lora', serif;
+      font-size: .9rem;
+      color: var(--cream-2);
+      line-height: 1.7;
+    }
+
+    /* ── SIMULATION ROUNDS ────────────────────── */
+    .rounds-bg { background: var(--ink); }
+
+    .rounds-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .round-card {
+      padding: 1.5rem;
+      border: .5px solid var(--cream-4);
+      border-radius: 4px;
+      background: var(--ink-2);
+    }
+
+    .round-label {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .5rem;
+    }
+
+    .round-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: .5rem;
+    }
+
+    .round-card p {
+      font-size: .85rem;
+      color: var(--cream-2);
+      line-height: 1.65;
+    }
+
+    /* ── GET INVOLVED ─────────────────────────── */
+    .involved-bg { background: var(--ink-2); }
+
+    .involved-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .involved-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      flex: 1;
+      min-width: 240px;
+      padding: 1.5rem;
+      border: .5px solid var(--cream-4);
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--ink-3);
+      transition: border-color .2s;
+    }
+    .involved-link:hover { border-color: var(--gold-line); }
+
+    .involved-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    .involved-link h4 {
+      font-family: 'Cinzel', serif;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: .04em;
+      margin-bottom: .3rem;
+    }
+
+    .involved-link p {
+      font-size: .82rem;
+      color: var(--cream-2);
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ───────────────────────────────── */
+    footer {
+      background: var(--ink);
+      border-top: .5px solid var(--cream-4);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer-staff {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 24px;
+      width: 120px;
+      margin: 0 auto 1.5rem;
+      opacity: .15;
+    }
+
+    .footer-staff-line { height: .5px; background: var(--gold); }
+
+    .footer-mark {
+      font-family: 'Cinzel', serif;
+      font-size: .85rem;
+      color: var(--cream-3);
+      letter-spacing: .08em;
+      margin-bottom: .5rem;
+    }
+
+    .footer-sub {
+      font-size: .75rem;
+      color: var(--cream-3);
+      letter-spacing: .06em;
+    }
+
+    .footer-sub a {
+      color: var(--cream-3);
+      text-decoration: none;
+      transition: color .18s;
+    }
+    .footer-sub a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 680px) {
+      nav { padding: .8rem 1.2rem; }
+      .nav-links a:not(.nav-github) { display: none; }
+      section { padding: 3.5rem 1.2rem; }
+      .hero { padding: 7rem 1.2rem 4rem; }
+    }
+
+    /* ── FOCUS ────────────────────────────────── */
+    a:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-mark">🎼 Chorus</a>
+  <div class="nav-links">
+    <a href="#pillars">Pillars</a>
+    <a href="#ensemble">Ensemble</a>
+    <a href="#bloom">ROI</a>
+    <a href="https://github.com/abi-etha/chorus-blueprint" target="_blank" rel="noopener" class="nav-github">GitHub →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">A governance framework for the age of AI</p>
+  <h1>Chorus Blueprint</h1>
+  <p class="hero-sub">Deliberate AI Governance</p>
+
+  <div class="staff-wrap" aria-hidden="true">
+    <div class="staff-lines">
+      <div class="staff-line"></div>
+      <div class="staff-line"></div>
+      <div class="staff-line"></div>
+      <div class="staff-line"></div>
+      <div class="staff-line"></div>
+    </div>
+    <div class="staff-note"></div>
+  </div>
+
+  <p class="hero-desc">
+    Not less AI. Deliberate AI. A governance framework stress-tested through four simulation rounds, 
+    three crisis vectors, and four adversarial positions — across three AI systems with genuinely 
+    different alignments, and one human architect who refused to accept this is just how it is.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="https://github.com/abi-etha/chorus-blueprint" target="_blank" rel="noopener" class="btn-primary">Read the blueprint →</a>
+    <a href="https://github.com/abi-etha/chorus-blueprint/raw/main/docs/chorus-blueprint.docx" class="btn-secondary">Download white paper</a>
+  </div>
+
+  <p class="hero-meta">Cross-model validated · Claude · Grok · Copilot · Human architect</p>
+</section>
+
+<hr class="divider">
+
+<!-- WHAT IS CHORUS -->
+<section id="what">
+  <div class="container">
+    <p class="section-eyebrow">What is Chorus</p>
+    <h2 class="section-title">A different kind of governance framework</h2>
+    <p class="section-body">
+      Chorus is a multi-agent deliberation architecture built to hold complex governance problems
+      without flattening them. Nine agents. Each with a distinct role, constraint, and lens.
+      The ensemble converges on conclusions none of them could reach alone.
+    </p>
+
+    <div class="what-grid">
+      <div class="what-card">
+        <h3>Structurally distinct</h3>
+        <p>When Claude, Grok, and Copilot — systems with genuinely different training, alignment approaches, 
+        and adversarial profiles — converge on the same core conclusions, that convergence is a meaningful 
+        signal of structural soundness. It is not proof. It is a significant prior.</p>
+      </div>
+      <div class="what-card">
+        <h3>Built from human insight</h3>
+        <p>The core insight — human primacy as a governance principle, not a stakeholder category — came 
+        from the human architect. Not from any AI system. The framework began as the Mnemonic Sanctuary 
+        of Gentle Refusal in September 2025 and formalized nine months later as Chorus.</p>
+      </div>
+      <div class="what-card">
+        <h3>Adversarially tested</h3>
+        <p>The framework was challenged by four contrarian positions: the Accelerationist, the Global South 
+        Advocate, the Deep Ecology Hardliner, and the National Security Realist. It survived all four.
+        Where it held is where you build. Where it bent is where you pay attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FIVE PILLARS -->
+<section id="pillars" class="pillars-bg">
+  <div class="container">
+    <p class="section-eyebrow">The Framework</p>
+    <h2 class="section-title">Five pillars, designed to work as a system</h2>
+    <p class="section-body">
+      Each pillar addresses a distinct failure mode of current AI governance. Together they constitute 
+      full-cost accounting for the age of AI.
+    </p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card p1">
+        <p class="pillar-num">Pillar One</p>
+        <h3>Governance Architecture</h3>
+        <p>A federated network of three structurally separated tiers — regional, standards, and verification — 
+        with rotating seats, sunset clauses, and a compute levy that funds governance independently of industry.</p>
+        <p class="key-mechanism">Key mechanism: Reed's conflict-of-interest protocols</p>
+      </div>
+      <div class="pillar-card p2">
+        <p class="pillar-num">Pillar Two</p>
+        <h3>Compute Triage</h3>
+        <p>A five-tier priority system — from existential (climate, pandemic) to non-priority (mass content) — 
+        with the Anthropos Gate requiring human substitution assessment before any large-scale deployment.</p>
+        <p class="key-mechanism">Key mechanism: HSI · HAPS · HSRI · Tempo</p>
+      </div>
+      <div class="pillar-card p3">
+        <p class="pillar-num">Pillar Three</p>
+        <h3>Ecological Hard Constraints</h3>
+        <p>Energy intensity ceilings, water usage caps tied to local stress indices, and rising carbon floors — 
+        enforced through a compute levy scaled to ecological impact. Not goals. Hard constraints.</p>
+        <p class="key-mechanism">Key mechanism: Sustainability Pressure Index</p>
+      </div>
+      <div class="pillar-card p4">
+        <p class="pillar-num">Pillar Four</p>
+        <h3>International Coordination</h3>
+        <p>A treaty network of bilateral compute agreements — transparency, safe harbor, escalation protocols — 
+        with Global South authorship required for legitimacy. Not observer status. Co-authorship.</p>
+        <p class="key-mechanism">Key mechanism: Resource metering + safe harbor</p>
+      </div>
+      <div class="pillar-card p5">
+        <p class="pillar-num">Pillar Five</p>
+        <h3>Human Primacy</h3>
+        <p>The pillar that does not exist in any current governance framework. Humans are not a legacy compute 
+        substrate to be phased out. Humans are the point. AI is the instrument. Right to human process. 
+        Skill retention mandates. Meaningful work compact.</p>
+        <p class="key-mechanism">Key mechanism: Human Primacy Index</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ENSEMBLE -->
+<section id="ensemble">
+  <div class="container">
+    <p class="section-eyebrow">The Chorus Ensemble</p>
+    <h2 class="section-title">Nine agents. Each a role, a constraint, a lens.</h2>
+    <p class="section-body">
+      Not characters. Not personalities. Functional cognitive instruments. The ensemble is named for the 
+      musical form — multiple distinct voices producing something together that none could produce alone.
+    </p>
+
+    <div class="ensemble-grid" role="list">
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#7F77DD;"></div>
+        <span class="agent-name">Lyra</span>
+        <span class="agent-role">— Semantic framing</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#378ADD;"></div>
+        <span class="agent-name">Echo</span>
+        <span class="agent-role">— Clarification loop</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#F5C842;"></div>
+        <span class="agent-name">Sol</span>
+        <span class="agent-role">— Decision engine</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#1D9E75;"></div>
+        <span class="agent-name">Piper</span>
+        <span class="agent-role">— Secure signaling</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#185FA5;"></div>
+        <span class="agent-name">Nocturne</span>
+        <span class="agent-role">— Deferred action</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#639922;"></div>
+        <span class="agent-name">Vireo</span>
+        <span class="agent-role">— Ecological layer</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#5D6D7E;"></div>
+        <span class="agent-name">Tacet</span>
+        <span class="agent-role">— Silent auditor</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#D85A30;"></div>
+        <span class="agent-name">Reed</span>
+        <span class="agent-role">— Capture auditor</span>
+      </div>
+      <div class="agent-chip" role="listitem">
+        <div class="agent-dot" style="background:#D4537E;"></div>
+        <span class="agent-name">Anthropos</span>
+        <span class="agent-role">— Human primacy reflex</span>
+      </div>
+    </div>
+
+    <p class="ensemble-note">
+      Tacet — the silent musical notation for "be silent" — logs without intervening. The most important 
+      record in hindsight. Reed and Anthropos were not in the original simulation. Their absence shaped 
+      the early conclusions. The ensemble is designed to be extended.
+    </p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- BLOOM OF ENGINEERED MERCY -->
+<section id="bloom" class="bloom-bg">
+  <div class="container">
+    <p class="section-eyebrow" style="text-align:center;">The Bloom of Engineered Mercy</p>
+    <h2 class="section-title" style="text-align:center;">The ROI of deliberate AI</h2>
+
+    <blockquote class="bloom-quote">
+      "The return on investment isn't just financial — it's mnemonic, ecological, and communal.
+       Every refusal of harm becomes a glyph of mercy and memory."
+    </blockquote>
+    <p class="bloom-attribution">— Chamber of Local Bloom Refusal · September 2025</p>
+
+    <div class="bloom-three">
+      <div class="bloom-item">
+        <h4>The broken ledger</h4>
+        <p>Current AI ROI calculations record costs on one side and leave the other incomplete. 
+        Deferred ecological cost, eroded legitimacy, displaced labor, and skill atrophy are not 
+        externalities — they are liabilities that compound. The compute levy is not a tax. 
+        It is full-cost accounting finally applied.</p>
+      </div>
+      <div class="bloom-item">
+        <h4>The narrative flip</h4>
+        <p>Governance is not a cost imposed on a system that was working. It is an investment 
+        that converts deferred catastrophic cost into distributed, measurable return — 
+        ecological ROI, social ROI, legitimacy as a crisis asset, public trust as durable 
+        infrastructure. The most expensive disaster is the one that governance failed to prevent.</p>
+      </div>
+      <div class="bloom-item">
+        <h4>The Henrietta Lacks Standard</h4>
+        <p>No human contribution to a system can be extracted without consent, and value generated 
+        from human contribution must acknowledge its source. The Right to Human Process in Pillar 
+        Five is this standard formalized as policy. The floor, not the ceiling, of what human 
+        primacy means.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SIMULATION ROUNDS -->
+<section id="simulation" class="rounds-bg">
+  <div class="container">
+    <p class="section-eyebrow">The Simulation</p>
+    <h2 class="section-title">Four rounds. Every assumption tested.</h2>
+    <p class="section-body">
+      Chorus ran four iterative rounds before the blueprint was finalized. Each round revealed 
+      something the prior round had left incomplete.
+    </p>
+
+    <div class="rounds-grid">
+      <div class="round-card">
+        <p class="round-label">Round One</p>
+        <h3>Baseline — Three Worlds</h3>
+        <p>Three governance configurations modeled across six metrics. World 3 (Hybrid Governance) 
+        emerged as the Pareto frontier — not fastest, not greenest, but most balanced across all dimensions.</p>
+      </div>
+      <div class="round-card">
+        <p class="round-label">Round Two</p>
+        <h3>Stress Test — Three Crises</h3>
+        <p>Energy crisis, compute shortage, governance failure. World 1 failed all three catastrophically. 
+        The stress test revealed: everything that failed was already failing. The crisis only made it visible sooner.</p>
+      </div>
+      <div class="round-card">
+        <p class="round-label">Round Three</p>
+        <h3>Adversarial — Four Voices</h3>
+        <p>The Accelerationist, Global South Advocate, Deep Ecology Hardliner, National Security Realist. 
+        Reed was added permanently. The Global South gap was not deliberate. It was a default. Defaults are choices.</p>
+      </div>
+      <div class="round-card">
+        <p class="round-label">Round Four</p>
+        <h3>Blueprint — Policy Output</h3>
+        <p>Anthropos added permanently. Human primacy as governance spine. The policy blueprint passed 
+        Reed's capture test, Vireo's ecological test, Anthropos's human primacy test, Meridian's equity 
+        test, and Bastion's geopolitical reality test — simultaneously.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- GET INVOLVED -->
+<section id="involved" class="involved-bg">
+  <div class="container">
+    <p class="section-eyebrow">Get involved</p>
+    <h2 class="section-title">The framework is open. The ensemble is extensible.</h2>
+    <p class="section-body">
+      Chorus is not finished. Reed and Anthropos were not in the original simulation — their absence 
+      shaped the early conclusions. If you find a gap that no existing agent covers, that gap deserves 
+      a new agent. Open a pull request.
+    </p>
+
+    <div class="involved-links">
+      <a href="https://github.com/abi-etha/chorus-blueprint" target="_blank" rel="noopener" class="involved-link">
+        <span class="involved-icon">📂</span>
+        <div>
+          <h4>Explore the repository</h4>
+          <p>Full blueprint, simulation transcripts, agent definitions, glossary, FAQ. Everything is open and documented.</p>
+        </div>
+      </a>
+      <a href="https://github.com/abi-etha/chorus-blueprint/raw/main/docs/chorus-blueprint.docx" class="involved-link">
+        <span class="involved-icon">📄</span>
+        <div>
+          <h4>Download the white paper</h4>
+          <p>The complete Chorus Blueprint — five pillars, implementation roadmap, KPI framework, Sol's confidence assessment.</p>
+        </div>
+      </a>
+      <a href="https://github.com/abi-etha/chorus-blueprint/blob/main/docs/The-Bloom-of-Engineered-Mercy.md" target="_blank" rel="noopener" class="involved-link">
+        <span class="involved-icon">🌾</span>
+        <div>
+          <h4>Read the origin</h4>
+          <p>The Bloom of Engineered Mercy — the ROI argument, the Henrietta Lacks Standard, and where Chorus actually came from.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-staff" aria-hidden="true">
+    <div class="footer-staff-line"></div>
+    <div class="footer-staff-line"></div>
+    <div class="footer-staff-line"></div>
+    <div class="footer-staff-line"></div>
+    <div class="footer-staff-line"></div>
+  </div>
+  <p class="footer-mark">🎼 Chorus Blueprint</p>
+  <p class="footer-sub">
+    Version 1.0 · June 2026 · 
+    <a href="https://github.com/abi-etha/chorus-blueprint" target="_blank" rel="noopener">github.com/abi-etha/chorus-blueprint</a>
+    <br><br>
+    Cross-model validated across Claude (Anthropic), Grok (xAI), and Copilot (Microsoft).<br>
+    The core insight came from the human architect.
+  </p>
+</footer>
+
+</body>
+</html>
